@@ -21,7 +21,8 @@ export async function generateMetaData({ params: {userId}}: Params): Promise<Met
   }
 }
 
-export default async function UserPage({ params: {userId}}: Params) {
+export default async function UserPage({ params: { userId } }: Params) {
+
   const userData: Promise<User> = getUser(userId)
   const userPostsData: Promise<Post[]> = getUserPosts(userId)
 
